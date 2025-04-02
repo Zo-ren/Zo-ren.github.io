@@ -44,6 +44,18 @@ body {
     cursor: pointer;
 }
 
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 #helloYou {
     display: none;
     margin-top: 10px;
@@ -54,6 +66,7 @@ body {
     cursor: pointer;
     position: absolute;
     bottom: 50px;
+    animation: pulse 1.5s infinite; 
 }
 
 video {
