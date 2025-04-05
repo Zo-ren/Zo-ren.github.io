@@ -5,15 +5,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Surprise :)</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            text-align: center;
+            transition: background 0.3s, color 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+
+        .dark {
+            background-color: black;
+            color: white;
+        }
+
+        .light {
+            background-color: white;
+            color: black;
+        }
+
+        #darkModeButton,
+        #lightModeButton,
+        #linkButton {
+            position: absolute;
+            top: 10px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #darkModeButton {
+            right: 150px;
+            background: black;
+            color: white;
+        }
+
+        #lightModeButton {
+            right: 20px;
+            background: white;
+            color: black;
+        }
+
+        #linkButton {
+            left: 20px;
+            background: rgb(71, 136, 233);
+            color: white;
+        }
+
+        #helloYou {
+            display: none;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: darkblue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            bottom: 50px;
+        }
+
+        video {
+            display: none;
+            width: 400px;
+            height: 400px;
+            margin-top: 20px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        video::-webkit-media-controls-panel {
+            display: none !important;
+            visibility: hidden;
+        }
+    </style>
 </head>
 
 <body>
+    <button id="linkButton" onclick="window.location.href='../index.html'">Go to Home</button>
     <button id="darkModeButton">Dark Mode</button>
     <button id="lightModeButton">Light Mode</button>
-    <video id="video" src="/Videos/mebebi.mp4" controls></video>
-    <button id="helloYou">Click Me</button>
+    <video id="video" src="../Videos/mebebi.mp4" controls></video>
+    <button id="helloYou">Hello YOU</button>
 
-    <script src="script.js"></script>
+    <script>
+        const darkModeButton = document.getElementById("darkModeButton");
+        const lightModeButton = document.getElementById("lightModeButton");
+        const clickMeButton = document.getElementById("helloYou");
+        const video = document.getElementById("video");
+
+        darkModeButton.addEventListener("click", function () {
+            document.body.classList.add("dark");
+            document.body.classList.remove("light");
+            clickMeButton.style.display = "inline-block";
+        });
+
+        lightModeButton.addEventListener("click", function () {
+            document.body.classList.add("light");
+            document.body.classList.remove("dark");
+            clickMeButton.style.display = "none";
+            video.style.display = "none";
+            video.pause();
+            video.currentTime = 0;
+        });
+
+        clickMeButton.addEventListener("click", function () {
+            video.style.display = "block";
+            video.play();
+        });
+    </script>
 </body>
+
 </html>
