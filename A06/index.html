@@ -19,6 +19,26 @@
             colorBackGround.style.backgroundColor = "#148695";
         }
 
+        function color1MouseEnter() {
+            var color1Font = document.getElementById("color1Font");
+            color1Font.style.color = "#148695";
+        }
+
+        function color1MouseLeave() {
+            var color1Font = document.getElementById("color1Font");
+            color1Font.style.color = "#1AAFC2";
+        }
+
+        function color2MouseEnter() {
+            var color2Font = document.getElementById("color2Font");
+            color2Font.style.color = "#148695";
+        }
+
+        function color2MouseLeave() {
+            var color2Font = document.getElementById("color2Font");
+            color2Font.style.color = "#1AAFC2";
+        }
+
         function hideFooter() {
             var footerElement = document.getElementById("baddiesHide");
             footerElement.style.display = "none";
@@ -39,13 +59,13 @@
     </script>
 </head>
 
-<body>
+<body style="background-color: black;">
     <div class="container-fluid p-3 mb-3" onmouseover="bgcolorMouseEnter()" onmouseleave="bgcolorMouseLeave()"
         id="colorBackGround" style="background-color: #148695; ">
         <div class="row">
             <div class="col">
-                <button id="linkButton" class="btn btn-primary rounded-4"
-                    onclick="window.location.href='../index.html'" style="background-color: #12199D; border: none;">Go
+                <button id="linkButton" class="btn btn-primary rounded-4" onclick="window.location.href='../index.html'"
+                    style="background-color: #12199D; border: none;">Go
                     to Projects</button>
                 <h1 class="text-center" style="color: white;">Gallery</h1>
             </div>
@@ -54,7 +74,8 @@
     <div class="container-fluid my-3" id="baddiesHide">
         <div class="row">
             <div class="col">
-                <div class="h2 my-3 text-center" onclick="hideFooter()" style="color: #1AAFC2;">
+                <div class="h2 my-3 text-center" onclick="hideFooter()" style="color: #1AAFC2;"
+                    onmouseover="color1MouseEnter()" onmouseleave="color1MouseLeave()" id="color1Font">
                     NoSauces
                 </div>
             </div>
@@ -65,7 +86,8 @@
     <div class="container-fluid" id="baddiesShow" style="display: none;">
         <div class="row">
             <div class="col">
-                <div class="h2 my-3 text-center" onclick="showFooter()" style="color: #1AAFC2;">
+                <div class="h2 my-3 text-center" onclick="showFooter()" style="color: #1AAFC2;"
+                    onmouseover="color2MouseEnter()" onmouseleave="color2MouseLeave()" id="color2Font">
                     Sauces
                 </div>
             </div>
@@ -73,7 +95,7 @@
     </div>
 
     <script>
-        var pictures = ["CatHm.jpg", "DogHuh.jpg", "CatHAHA.jpg", "DogHm.jpg", "KaydenLove.jpg", "CatDogAmazed.jpg", "DogCatFight.jpg", "Love.jpg"];
+        var pictures = ["CatHm.jpg", "DogHuh.jpg", "CatHAHA.jpg", "DogHm.jpg", "KaydenLove.jpg", "CatDogAmazed.jpg", "DogCatFight.jpg", "Love.jpg", "Yes.jpg", "Scary.jpg", "shrek.jpg", "Hmm.jpg"];
         var rowGallery = document.getElementById("row");
 
         for (var i = 0; i < pictures.length; i++) {
