@@ -33,25 +33,6 @@
       font-size: 0.9rem;
     }
 
-    /* Side footer styles */
-    .side-footer {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      background-color: #126074;
-      padding: 10px 20px;
-      border-radius: 50px;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-      color: white;
-      text-align: center;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: background-color 0.3s;
-    }
-
-    .side-footer:hover {
-      background-color: #126074;
-    }
   </style>
 </head>
 
@@ -60,7 +41,7 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <div class="h2" style="color: black;">
+          <div class="h2" style="color: white;">
             Dogs Album
           </div>
         </div>
@@ -100,11 +81,6 @@
 
     loadDogs();
   </script>
-
-  <!-- Side footer with home link -->
-  <div class="side-footer" onclick="window.location.href = 'your-home-page-url';">
-    Go to Home Page
-  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
