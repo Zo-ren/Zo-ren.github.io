@@ -61,7 +61,7 @@
 
     <script>
         const getDog = async (dogID) => {
-            const response = await fetch('https://dog.ceo/api/breeds/image/random');
+            const response = await fetch('https://dog.ceo/api/breeds/image/random?size=small');
             const data = await response.json();
             const pic = data.message;
 
