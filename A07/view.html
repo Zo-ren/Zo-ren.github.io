@@ -52,13 +52,23 @@
     </div>
   </div>
 
-  <div class="container text-center my-3">
-    <button class="btn back-button rounded-4 mb-3" onclick="window.history.back()">← Back to Album</button>
-
-    <div class="dog-img-container">
-      <img id="dogImage" src="" alt="Dog Image">
+  <div class="container-fluid text-center my-3">
+    <div class="row">
+      <div class="col">
+        <button class="btn back-button rounded-4 mb-3" onclick="window.history.back()">← Back to Album</button>
+      </div>
     </div>
-    <div class="breed-name" id="breedName"></div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <div class="dog-img-container">
+            <img id="dogImage" src="" alt="Dog Image">
+          </div>
+          <div class="breed-name" id="breedName"></div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script>
@@ -96,7 +106,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
-  </script>
+    </script>
 </body>
 
 </html>
