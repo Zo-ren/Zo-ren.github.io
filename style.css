@@ -1,8 +1,6 @@
 :root {
     --gradient-light: linear-gradient(to right, #d3cce3, #e9e4f0);
-    /* Light theme gradient */
     --gradient-dark: linear-gradient(to right, #0f0c29, #302b63, #24243e);
-    /* Dark theme gradient */
 }
 
 @keyframes fadeIn {
