@@ -6,42 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Good Items</title>
     <link rel="icon" href="Pictures/Gonji.png">
-     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 
-    <style>
-        .body {
-            background: #0F2027;
-            background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
-            background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
-        }
-    </style>
-
     <script>
-        function bgcolorMouseEnter() {
-            var colorBackGround = document.getElementById("colorBackGround");
-            colorBackGround.style.backgroundColor = "#1AAFC2";
+        function btncolorMouseEnter() {
+            var colorBackGround = document.getElementById("linkButton");
+            colorBackGround.style.backgroundColor = "#928DAB";
+            colorBackGround.style.color = "#1F1C2C";
         }
 
-        function bgcolorMouseLeave() {
-            var colorBackGround = document.getElementById("colorBackGround")
-            colorBackGround.style.backgroundColor = "#148695";
+        function btncolorMouseLeave() {
+            var colorBackGround = document.getElementById("linkButton");
+            colorBackGround.style.backgroundColor = "#1F1C2C";
+            colorBackGround.style.color = "#928DAB";
         }
 
         function color1MouseEnter() {
             var color1Font = document.getElementById("color1Font");
-            color1Font.style.color = "#148695";
+            color1Font.style.color = "#928DAB";
         }
 
         function color1MouseLeave() {
             var color1Font = document.getElementById("color1Font");
-            color1Font.style.color = "#1AAFC2";
+            color1Font.style.color = "#1F1C2C";
         }
 
         function color2MouseEnter() {
             var color2Font = document.getElementById("color2Font");
-            color2Font.style.color = "#148695";
+            color2Font.style.color = "#928DAB";
         }
 
         function color2MouseLeave() {
@@ -69,20 +63,21 @@
     </script>
 </head>
 
-<body>
+<body id="body" style="background-color: #928DAB;">
     <div class="container-fluid p-3 mb-3" onmouseover="bgcolorMouseEnter()" onmouseleave="bgcolorMouseLeave()"
-        id="colorBackGround" style="background-color: #148695; ">
+        id="colorBackGround" style="background-color: #1F1C2C; ">
         <div class="row">
             <div class="col">
-                <h1 class="text-center" style="color: white;">Gallery</h1>
+                <h1 class="text-center" style="color: #928DAB;">Gallery</h1>
             </div>
         </div>
     </div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col">
-                <button id="linkButton" class="btn btn-primary rounded-4" onclick="window.location.href='../index.html'"
-                    style="background-color: #12199D; border: none;">Go
+            <div class="col d-flex justify-content-center">
+                <button id="linkButton" onmouseover="btncolorMouseEnter()" onmouseleave="btncolorMouseLeave()" class=" btn
+                    btn-primary rounded-4" onclick="window.location.href='../index.html'"
+                    style="background-color: #1F1C2C; border: none; color: #928DAB;">Go
                     to Projects</button>
             </div>
         </div>
@@ -90,7 +85,7 @@
     <div class="container-fluid my-3" id="baddiesHide">
         <div class="row">
             <div class="col">
-                <div class="h2 my-3 text-center" onclick="hideFooter()" style="color: #1AAFC2;"
+                <div class="h2 my-3 text-center" onclick="hideFooter()" style="color: #1F1C2C;"
                     onmouseover="color1MouseEnter()" onmouseleave="color1MouseLeave()" id="color1Font">
                     NoSauces
                 </div>
@@ -103,7 +98,7 @@
     <div class="container-fluid" id="baddiesShow" style="display: none;">
         <div class="row">
             <div class="col">
-                <div class="h2 my-3 text-center" onclick="showFooter()" style="color: #1AAFC2;"
+                <div class="h2 my-3 text-center" onclick="showFooter()" style="color: #928DAB;"
                     onmouseover="color2MouseEnter()" onmouseleave="color2MouseLeave()" id="color2Font">
                     Sauces
                 </div>
