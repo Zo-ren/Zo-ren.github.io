@@ -13,6 +13,7 @@
 }
 
 body {
+    width: 100%;
     font-family: 'Lato', sans-serif;
     font-weight: bold;
     margin: 0;
@@ -31,6 +32,7 @@ body {
 .navbar-brand,
 .dropdown-item,
 .main-text {
+    
     font-weight: bold;
     background: var(--gradient-dark);
     -webkit-background-clip: text;
@@ -77,7 +79,7 @@ body {
 }
 
 .main-text {
-    font-size: clamp(4rem, 8vw, 7rem);
+    font-size: clamp(3.8rem, 8vw, 7rem);
     font-weight: bold;
     line-height: 1;
     width: 100%;

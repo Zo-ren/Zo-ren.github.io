@@ -64,11 +64,14 @@
 </head>
 
 <body id="body" style="background-color: #928DAB;">
-    <div class="container-fluid p-3 mb-3" onmouseover="bgcolorMouseEnter()" onmouseleave="bgcolorMouseLeave()"
-        id="colorBackGround" style="background-color: #1F1C2C; ">
+    <div class="container-fluid p-3 mb-3 d-flex justify-content-between align-items-center"
+        onmouseover="bgcolorMouseEnter()" onmouseleave="bgcolorMouseLeave()" id="colorBackGround"
+        style="background-color: #1F1C2C; ">
         <div class="row">
             <div class="col">
                 <h1 class="text-center" style="color: #928DAB;">Gallery</h1>
+                    <button class="btn btn-secondary rounded-4" onclick="toggleMode()">Toggle Dark/Light Mode</button>
+                </div>
             </div>
         </div>
     </div>
@@ -107,15 +110,61 @@
     </div>
 
     <script>
-        var pictures = ["CatHm.jpg", "DogHuh.jpg", "CatHAHA.jpg", "DogHm.jpg", "KaydenLove.jpg", "CatDogAmazed.jpg", "DogCatFight.jpg", "Love.jpg", "Yes.jpg", "GonjiBox.jpg", "shrek.jpg", "Hmm.jpg"];
+        let darkMode = true; // default is dark mode
+
+        function toggleMode() {
+            const body = document.getElementById("body");
+            const title = document.querySelector("h1");
+            const linkBtn = document.getElementById("linkButton");
+            const color1Font = document.getElementById("color1Font");
+            const color2Font = document.getElementById("color2Font");
+            const baddiesHide = document.getElementById("baddiesHide");
+            const baddiesShow = document.getElementById("baddiesShow");
+            const colorBackGround = document.getElementById("colorBackGround");
+
+            if (darkMode) {
+                // Light mode
+                body.style.backgroundColor = "#f8f9fa";
+                colorBackGround.style.backgroundColor = "#dee2e6";
+                title.style.color = "#1F1C2C";
+
+                linkBtn.style.backgroundColor = "#f8f9fa";
+                linkBtn.style.color = "#1F1C2C";
+
+                color1Font.style.color = "#1F1C2C";
+                color2Font.style.color = "#1F1C2C";
+
+                baddiesShow.querySelector(".h2").style.color = "#1F1C2C";
+                baddiesHide.querySelector(".h2").style.color = "#1F1C2C";
+
+            } else {
+                // Dark mode
+                body.style.backgroundColor = "#928DAB";
+                colorBackGround.style.backgroundColor = "#1F1C2C";
+                title.style.color = "#928DAB";
+
+                linkBtn.style.backgroundColor = "#1F1C2C";
+                linkBtn.style.color = "#928DAB";
+
+                color1Font.style.color = "#1F1C2C";
+                color2Font.style.color = "#928DAB";
+
+                baddiesShow.querySelector(".h2").style.color = "#928DAB";
+                baddiesHide.querySelector(".h2").style.color = "#1F1C2C";
+            }
+
+            darkMode = !darkMode;
+        }
+
+        var pictures = ["CatHm.jpg", "DogHuh.jpg", "CatHAHA.jpg", "DogHm.jpg", "KaydenLove.jpg", "CatDogAmazed.jpg",
+            "DogCatFight.jpg", "Love.jpg", "Yes.jpg", "GonjiBox.jpg", "shrek.jpg", "Hmm.jpg"];
         var rowGallery = document.getElementById("row");
 
         for (var i = 0; i < pictures.length; i++) {
-            rowGallery.innerHTML += '<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 col-12 px-3"><div class="card shadow my-3 mx-auto rounded-5 overflow-hidden" style="border: none; height: 300px; width: 100%;"><img src="../Pictures/A06Pics/' + pictures[i] + '"class="card-img-top object-fit-fill border h-100 w-100" alt=""></div></div>';
-        }
-
-
-    </script>
+            rowGallery.innerHTML
+                += '<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 col-12 px-3"><div class="card shadow my-3 mx-auto rounded-5 overflow-hidden" style="border: none; height: 300px; width: 100%;"><img src="../Pictures/A06Pics/'
+                + pictures[i] + '"class="card-img-top object-fit-fill border h-100 w-100" alt=""></div></div>';
+        } </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
