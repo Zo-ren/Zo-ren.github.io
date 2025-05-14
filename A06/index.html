@@ -14,14 +14,14 @@
     <script>
         function btncolorMouseEnter() {
             var colorBackGround = document.getElementById("linkButton");
-            colorBackGround.style.backgroundColor = "#1F1C2C";
-            colorBackGround.style.color = "#928DAB";
+            colorBackGround.style.backgroundColor = "#928DAB";
+            colorBackGround.style.color = "#1F1C2C";
         }
 
         function btncolorMouseLeave() {
             var colorBackGround = document.getElementById("linkButton");
-            colorBackGround.style.backgroundColor = "#928DAB";
-            colorBackGround.style.color = "#1F1C2C";
+            colorBackGround.style.backgroundColor = "#1F1C2C";
+            colorBackGround.style.color = "#928DAB";
         }
 
         function hideFooter() {
@@ -64,7 +64,7 @@
             <div class="col d-flex justify-content-center">
                 <button id="linkButton" onmouseover="btncolorMouseEnter()" onmouseleave="btncolorMouseLeave()" class=" btn
                     btn-primary rounded-4" onclick="window.location.href='../index.html'"
-                    style="background-color: #928DAB; border: none; color: #1F1C2C; font-weight: bold;">Go
+                    style="background-color: #1F1C2C; border: none; color: #928DAB; font-weight: bold;">Go
                     to Projects</button>
             </div>
         </div>
@@ -72,9 +72,8 @@
     <div class="container-fluid my-3" id="baddiesHide">
         <div class="row">
             <div class="col">
-                <div class="h2 my-3 text-center" onclick="hideFooter()" style="color: #1F1C2C;"
-                    onmouseover="color1MouseEnter()" onmouseleave="color1MouseLeave()" id="color1Font">
-                    NoSauces
+                <div class="h2 my-3 text-center" onclick="hideFooter()" style="color: #1F1C2C; font-weight: bold;" id="color1Font">
+                    Close
                 </div>
             </div>
         </div>
@@ -85,9 +84,8 @@
     <div class="container-fluid" id="baddiesShow" style="display: none;">
         <div class="row">
             <div class="col">
-                <div class="h2 my-3 text-center" onclick="showFooter()" style="color: #1F1C2C;"
-                    onmouseover="color2MouseEnter()" onmouseleave="color2MouseLeave()" id="color2Font">
-                    Sauces
+                <div class="h2 my-3 text-center" onclick="showFooter()" style="color: #1F1C2C; font-weight: bold;" id="color2Font">
+                    Open
                 </div>
             </div>
         </div>
