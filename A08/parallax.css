@@ -6,70 +6,78 @@
 
 .keyart,
 .keyart_layer {
-	height: 1000px;
+  height: 1000px;
 }
 
 .keyart {
-	position: relative;
-	z-index: 10;
+  position: relative;
+  z-index: 10;
 }
 
 .keyart_layer {
-	background-position: bottom center;
-	background-size: auto 1038px;
-	background-repeat: repeat-x;
-	width: 100%;
-	position: absolute;
+  background-position: bottom center;
+  background-size: auto 1038px;
+  background-repeat: repeat-x;
+  width: 100%;
+  position: absolute;
 }
 
 .keyart_layer.parallax {
-	position: fixed;
+  position: fixed;
 }
 
 .main-content {
-	width: 100%;
-	position: absolute;
-	z-index: 200;
+  width: 100%;
+  position: absolute;
+  z-index: 200;
 }
 
 /*ADD OR REMOVE LAYERS AS NEEDED*/
 
 #keyart-0 {
-	background-image: url(img/parallax0.png);
+  background-image: url(img/parallax0.png);
 }
 
 #keyart-1 {
-	background-image: url(img/parallax1.png);
+  background-image: url(img/parallax1.png);
 }
 
 #keyart-2 {
-	background-image: url(img/parallax2.png);
+  background-image: url(img/parallax2.png);
 }
 
 #keyart-3 {
-	background-image: url(img/parallax3.png);
+  background-image: url(img/parallax3.png);
 }
 
 #keyart-4 {
-	background-image: url(img/parallax4.png);
+  background-image: url(img/parallax4.png);
 }
 
 #keyart-5 {
-	background-image: url(img/parallax5.png);
+  background-image: url(img/parallax5.png);
 }
 
 #keyart-6 {
-	background-image: url(img/parallax6.png);
+  background-image: url(img/parallax6.png);
 }
 
 #keyart-7 {
-	background-image: url(img/parallax7.png);
+  background-image: url(img/parallax7.png);
 }
 
 #keyart-8 {
-	background-image: url(img/parallax8.png);
+  background-image: url(img/parallax8.png);
 }
 
+img.eleceed-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-width: 100%;
+}
+
+
 #keyart-scrim {
-	opacity: 0;
+  opacity: 0;
 }
