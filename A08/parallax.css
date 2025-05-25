@@ -77,7 +77,26 @@ img.eleceed-img {
   max-width: 100%;
 }
 
-
 #keyart-scrim {
   opacity: 0;
+}
+
+.float-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 30px;
+  background-color: #6a78d1;
+  color: white;
+  border-radius: 50%;
+  padding: 15px 18px;
+  font-size: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  z-index: 999;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.float-btn:hover {
+  background-color: #0056b3;
 }
